@@ -13,7 +13,7 @@ common_trees = tree_counts[tree_counts > 2500].index.to_list()
 print(tree_counts)
 
 def _make_fig(df):
-    dfg = data.groupby("GATTUNG").agg(
+    dfg = df.groupby("GATTUNG").agg(
         {
             "PFLANZJAHR": "mean",
             "BAUMHOEHE": "mean",
